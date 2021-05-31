@@ -21,9 +21,7 @@ public class Student extends Person implements Comparable<Student> {
 
     @Override
     public String toString() {
-        return "Student{" + super.toString()+
-                "level=" + level +
-                '}';
+     return super.toString()  + "," + level;
     }
 
     @Override

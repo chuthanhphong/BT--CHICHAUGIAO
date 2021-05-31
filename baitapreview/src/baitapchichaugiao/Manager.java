@@ -3,7 +3,7 @@ package baitapchichaugiao;
 import java.util.*;
 
 public class Manager {
-    public Map<Integer, Student> listStudent = new HashMap<>();
+    public static Map<Integer, Student> listStudent = new HashMap<>();
 
     public void addStudent(int id, Student student) {
         listStudent.put(id, student);
@@ -29,11 +29,11 @@ public class Manager {
         return false;
     }
 
-    public Student searchforId(int id) {
+    public void searchforId(int id) {
         if (check(id)) {
-            return listStudent.get(id);
-        }
-        return new Student();
+            System.out.println(listStudent.get(id));
+        }else {
+        System.out.println("không có id này");}
     }
 
     public void searchforName(String name) {
@@ -52,7 +52,7 @@ public class Manager {
     public void searchforage(int age) {
         Set<Integer> keys = listStudent.keySet();
         Map<Integer, Student> mapSameAge = new HashMap<>();
-        for (int key : keys) {
+        for (Integer key : keys) {
             if (listStudent.get(key).getAge() == age) {
                 mapSameAge.put(key, listStudent.get(key));
             }
@@ -75,10 +75,10 @@ public class Manager {
             @Override
             public int compare(Map.Entry<Integer, Student> o1, Map.Entry<Integer, Student> o2) {
                 int result = o1.getValue().getName().compareTo(o2.getValue().getName());
-               if(result==0){
-                   return o1.getValue().getAge()- o2.getValue().getAge();
-               }
-               return result;
+                if(result==0){
+                    return o1.getValue().getAge()- o2.getValue().getAge();
+                }
+                return result;
             }
         });
         Map<Integer ,Student> newListStudent = new LinkedHashMap<>();
@@ -89,7 +89,6 @@ public class Manager {
 
     }
 }
-
 
 
 
