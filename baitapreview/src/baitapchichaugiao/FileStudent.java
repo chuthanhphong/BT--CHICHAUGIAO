@@ -10,8 +10,10 @@ public class FileStudent {
     void writerFile(String path, Map<Integer, Student> students) throws IOException {
         FileWriter fr = new FileWriter(path);
         BufferedWriter bf = new BufferedWriter(fr);
+        bf.write("Id" + " ," + " Tên" + " ," + " Tuổi" + " ," + "Giới tính" + " ," + " Địa chỉ" + " ," + " level");
+        bf.write("\n");
         for(Integer key : students.keySet()){
-            bf.write(students.get(key).toString() + "\n");
+            bf.write(key+ ":" +students.get(key).toString() + "\n");
         }
         bf.close();
         fr.close();

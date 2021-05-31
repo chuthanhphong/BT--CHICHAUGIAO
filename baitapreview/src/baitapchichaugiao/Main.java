@@ -65,7 +65,12 @@ public class Main {
                     }
                     break;
                 }
-                case 2 -> manager.display();
+                case 2 ->{
+                       fileStudent.readfile("danhsach.csv");
+
+                    break;
+                }
+
                 case 3 -> {
                     System.out.println("Nhập id bạn muốn xóa");
                     int idofdelete = sc.nextInt();
