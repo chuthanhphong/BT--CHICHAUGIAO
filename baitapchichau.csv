@@ -1,0 +1,4 @@
+id, name, DateofBirth, gender, email, address, AveragePoint 
+ 1 , Chương , nam ,abc , bcd , 9.0
+2 , Chương , nam ,abc , bcd , 8.0
+3 , tuyền , nam ,abc , bcd , 8.0

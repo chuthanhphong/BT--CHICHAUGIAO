@@ -81,11 +81,6 @@ public class Manager {
                 return result;
             }
         });
-        Map<Integer ,Student> newListStudent = new LinkedHashMap<>();
-        for(Map.Entry<Integer,Student> entry:entryList){
-            newListStudent.put(entry.getKey(),entry.getValue());
-        }
-        this.listStudent= newListStudent;
 
     }
 }

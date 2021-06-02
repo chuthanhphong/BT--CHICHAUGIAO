@@ -13,7 +13,7 @@ public class FileStudent {
         bf.write("Id" + " ," + " Tên" + " ," + " Tuổi" + " ," + "Giới tính" + " ," + " Địa chỉ" + " ," + " level");
         bf.write("\n");
         for(Integer key : students.keySet()){
-            bf.write(key+ ":" +students.get(key).toString() + "\n");
+            bf.write(key+ "," +students.get(key).toString() + "\n");
         }
         bf.close();
         fr.close();
