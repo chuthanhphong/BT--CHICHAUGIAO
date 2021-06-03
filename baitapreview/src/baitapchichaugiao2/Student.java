@@ -87,10 +87,10 @@ public class Student implements Comparator {
 
     @Override
     public String toString() {
-        return "Student : | " +
-                "id= " + id +
-                ", name='" + name + '\'' +
-                ", datOfBirth='" + datOfBirth + '\'' +
+        return "Student : |" +
+                "id=" + id +
+                ", name=" + name + '\'' +
+                ", datOfBirth=" + datOfBirth + '\'' +
                 ", gender='" + gender + '\'' +
                 ", email='" + email + '\'' +
                 ", address='" + address + '\'' +

@@ -12,8 +12,8 @@ public class Test {
 //        System.out.println("-------------------------");
 //        manager.sortforname();
 //        manager.display();
-       manager.editStudent("1",new Student("2","Chiến","18/05/1990","nam","abc","bcd",8.0));
-       manager.display();
+        CheckValidate validate = new CheckValidate();
+        System.out.println(validate.validateID("C0321G1"));
 
 
 

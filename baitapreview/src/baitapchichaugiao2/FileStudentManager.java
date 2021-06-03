@@ -10,10 +10,10 @@ public class FileStudentManager {
                 BufferedWriter bw = new BufferedWriter(fw);
                 String str = "id, name, DateofBirth, gender, email, address, AveragePoint \n ";
                 for (Student student : studentList) {
-                        str += (student.getId() + " , " + student.getName() + " , " +
+                        str += (student.getId() + "," + student.getName() + "," +
                                 //studentList.get(i).getage()
-                                student.getGender() + " ," + student.getEmail() +
-                                " , " + student.getAddress() + " , " + student.getAveragePoint()+ "\n");
+                                student.getGender() + "," + student.getEmail() +
+                                "," + student.getAddress() + "," + student.getAveragePoint()+ "\n");
                 }
                 bw.write(str);
                 bw.close();
@@ -26,7 +26,6 @@ public class FileStudentManager {
                 String content = br.readLine();
                 while ((content=br.readLine())!=null){
                         String [] value = content.split(",");
-                        content.trim();
                         studentList.add(new Student(value[0],value[1],value[2],value[3],value[4],value[5],Double.parseDouble(value[6])));
                 };
                 return studentList;

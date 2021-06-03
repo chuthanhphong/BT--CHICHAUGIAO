@@ -19,6 +19,7 @@ public class Manager {
      for(int i=0;i<studentList.size();i++){
          if(id.equals(studentList.get(i).getId())){
              studentList.remove(i);
+             break;
          }
          else {
              System.out.println("không có id này");
@@ -34,21 +35,21 @@ public class Manager {
 
 
     }
-    public String searchforid(String id) {
+    public void searchforid(String id) {
         for (int i = 0; i < studentList.size(); i++) {
             if (id.equals(studentList.get(i).getId())) {
-                return studentList.get(i).toString();
+                System.out.println(studentList.get(i).toString());
             }
         }
-        return "không có id này";
+        System.out.println("không có id này");
     }
-    public String searchforName(String name){
+    public void searchforName(String name){
         for(int i =0;i<studentList.size();i++){
             if(name.equals(studentList.get(i).getName())){
-                return studentList.get(i).toString();
+                System.out.println(studentList.get(i).toString());
             }
         }
-        return "không có tên này";
+        System.out.println("không có tên này");
     }
     public void sortforname(){
         Collections.sort(studentList, new Comparator<Student>() {
