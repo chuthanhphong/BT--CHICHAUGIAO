@@ -1,5 +1,6 @@
 package baitapchichaugiao2;
 
+import java.time.LocalDate;
 import java.time.Year;
 import java.util.Comparator;
 
@@ -26,6 +27,7 @@ public class Student implements Comparator {
         this.address = address;
         AveragePoint = averagePoint;
     }
+
 
     public String getId() {
         return id;
@@ -82,15 +84,17 @@ public class Student implements Comparator {
     public void setAveragePoint(double averagePoint) {
         AveragePoint = averagePoint;
     }
-    public void getage(){
-    }
 
     @Override
     public String toString() {
-        return "Student : |" +
-                "id=" + id +
+        LocalDate localDate = LocalDate.now();
+        int year=Integer.parseInt(localDate.toString().substring(0,4));
+        int year1= Integer.parseInt(datOfBirth.substring(6));
+        int age = year-year1;
+        return "Student :|" +
+                "id=" +id+
                 ", name=" + name + '\'' +
-                ", datOfBirth=" + datOfBirth + '\'' +
+                ",age=" + age + '\'' +
                 ", gender='" + gender + '\'' +
                 ", email='" + email + '\'' +
                 ", address='" + address + '\'' +

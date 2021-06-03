@@ -11,7 +11,7 @@ public class FileStudentManager {
                 String str = "id, name, DateofBirth, gender, email, address, AveragePoint \n ";
                 for (Student student : studentList) {
                         str += (student.getId() + "," + student.getName() + "," +
-                                //studentList.get(i).getage()
+                                student.getDatOfBirth() + ","+
                                 student.getGender() + "," + student.getEmail() +
                                 "," + student.getAddress() + "," + student.getAveragePoint()+ "\n");
                 }
